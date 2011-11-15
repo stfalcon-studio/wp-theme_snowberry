@@ -72,13 +72,13 @@
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'twentyeleven' ); ?></p>
 	<?php endif; ?>
 	<!-- Commnets fake form header -->
-	<div class="comment-form-header">
+	<!--<div class="comment-form-header">
 		<h2>Leave a Reply</h2>
 		<a href="#" class="cloud"><span>Guest</span><div class="tail"></div></a>
 		<a href="#" class="cloud"><span>Log In</span><div class="tail"></div></a>
 		<a href="#" class="twitter-link">Twitter</a>
 		<a href="#" class="facebook-link">Facebook</a>
-	</div>
+	</div>-->
 	<!-- /Commnets fake form header -->
 	<?php comment_form(); ?>
 
