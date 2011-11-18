@@ -600,7 +600,7 @@ a:hover {
 	z-index: 2;
 }
 #site-title {
-	margin-right: 300px;
+	margin-right: 400px;
 	padding: 30px 0 0;
 	letter-spacing:-1px;
 }
@@ -621,7 +621,7 @@ a:hover {
 #site-description {
 	color: #525252;
 	font-size: 13px;
-	margin: 0 270px 25px 0;
+	margin: 0 400px 25px 0;
 	text-shadow:#fff 0 1px 0;
 	font-family:'Open Sans', arial, sans-serif;
 }
@@ -1010,6 +1010,7 @@ footer.entry-meta .sep{
 }
 .entry-content ul{
 	margin-left:1.3em;
+	overflow: hidden;
 }
 .entry-content ul li{
 	list-style:none;
@@ -1175,11 +1176,16 @@ img.size-full {
 	margin-top: 0;
 	padding: 0;
 }
+.entry-content p img{
+	margin-right:20px;
+	margin-bottom:20px;
+}
 img.alignleft,
 img.alignright,
 img.aligncenter {
 	margin-bottom: 0.94em;
 }
+
 p img,
 .wp-caption {
 	margin-top: 0.4em;
@@ -1225,7 +1231,7 @@ p img,
 }
 img#wpstats {
 	display: block;
-	margin: 0 auto 1.625em;
+	margin: 0 auto;
 }
 #content .gallery-columns-4 .gallery-item {
 	width: 23%;
@@ -1991,9 +1997,10 @@ section.recent-posts .other-recent-posts li:after {
 }
 #nav-above {
 	padding: 0 0 1.625em;
-}
-#nav-above {
 	display: none;
+}
+#nav-above .nav-next{
+	width: auto;
 }
 .paged #nav-above {
 	display: block;
@@ -2711,8 +2718,8 @@ p.comment-form-comment {
 	border-top: 1px solid #ddd;
 	color: #999999;
 	font-size: 13px;
-	line-height: 2.2em;
-	padding: 2.2em 0.5em 4em 0.5em;
+	line-height: 1.6em;
+	padding: 1.8em 0.5em 2.5em 0.5em;
 	text-align: center;
 }
 #site-generator a {
