@@ -125,7 +125,7 @@ body {
 #secondary {
 	float: right;
 	margin-right: 5%;
-	width: 22%;
+	width: 20%;
 	font-size:13px;
 }
 
@@ -1016,6 +1016,7 @@ footer.entry-meta .sep{
 	list-style:none;
 	background:url(images/ul-list-slyle.gif) 0 .7em no-repeat;
 	padding-left:1.2em;
+	margin-bottom: 0.5em;
 }
 .entry-content h1{
 	font-size:27px;
@@ -2045,13 +2046,7 @@ section.recent-posts .other-recent-posts li:after {
 }
 .widget {
 	clear: both;
-	margin: 0 0 1.3em;
-	border:1px solid #e3e3e3;
-	border-bottom:2px solid #e3e3e3;
-	padding:20px;
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	border-radius:5px;
+	margin: 0 0 38px;
 }
 .widget-title {
 	color: #9a9a9a;
@@ -2061,8 +2056,7 @@ section.recent-posts .other-recent-posts li:after {
 	line-height: 1;
 	text-transform: uppercase;
 	font-family:'Open Sans', arial, sans-serif;
-	margin:0 0 0.84em 0;
-	text-align:center;
+	margin: 0 0 11px 0;
 }
 .widget ul {
 	font-size: 15px;
@@ -2091,10 +2085,10 @@ section.recent-posts .other-recent-posts li:after {
 	background:url(images/widget-list.png) 0 20px no-repeat;
 }
 .widget ul li {
-	color: #777;
+	color: #fff;
 	font-size: 13px;
 	list-style:none;
-	padding:0 0 10px 0;
+	padding: 0 0 12px 0;
 }
 .widget a {
 	font-weight: normal;
@@ -2863,6 +2857,7 @@ p.comment-form-comment {
 	/* @media (max-width: 650px) Reduce font-sizes for better readability on smaller devices */
 	body, input, textarea {
 		font-size: 13px;
+		line-height: 1.4;
 	}
 	#site-title a {
 		font-size: 24px;
@@ -3042,8 +3037,8 @@ p.comment-form-comment {
 		width: 100%;
 	}
 	#content {
-		margin: 0;
-		width: auto;
+		margin: 0 32% 0 5%;
+		width: 64%;
 	}
 	.singular #content {
 		margin: 0;
