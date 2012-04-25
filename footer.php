@@ -23,8 +23,8 @@
 
 			<div id="site-generator">
 				<?php do_action( 'snowberry_credits' ); ?>
-				Powered by <a href="http://wordpress.org" style="text-decoration: underline;">WordPress</a>
-				Design by <a href="http://stfalcon.com" style="text-decoration: underline;">stfalcon.com</a><br>
+				Powered by <a href="http://wordpress.org" style="text-decoration: underline;">WordPress</a><br>
+				Design by <a href="http://stfalcon.com" style="text-decoration: underline;">stfalcon.com</a>
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

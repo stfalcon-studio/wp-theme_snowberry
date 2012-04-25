@@ -66,7 +66,7 @@
 	wp_head();
 ?>
 <!--google fonts (Open Sans)-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700&subset=latin,cyrillic&v2' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700&amp;subset=latin,cyrillic&amp;v2' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.6.2.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
