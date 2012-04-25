@@ -473,8 +473,8 @@ code, pre {
 	line-height: 19px !important;
 	margin-bottom: 1.625em;
 	overflow: auto;
-	display:block;
-	padding: 0 1.625em;
+	/*display:block;*/
+	/*padding: 0 1.625em;*/
 }
 pre{
 	background:#fff;
@@ -1016,7 +1016,7 @@ footer.entry-meta .sep{
 	list-style:none;
 	background:url(images/ul-list-slyle.gif) 0 .7em no-repeat;
 	padding-left:1.2em;
-	margin-bottom: 0.5em;
+	/*margin-bottom: 0.5em;*/
 }
 .entry-content h1{
 	font-size:27px;
@@ -1184,9 +1184,14 @@ img.size-full {
 img.alignleft,
 img.alignright,
 img.aligncenter {
-	margin-bottom: 0.94em;
+	margin-bottom: 0.94em !important;
 }
-
+img.aligncenter {
+	margin-right: auto !important;
+}
+img.alignnone {
+    vertical-align: inherit;
+}
 p img,
 .wp-caption {
 	margin-top: 0.4em;
