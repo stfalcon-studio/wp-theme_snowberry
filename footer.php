@@ -5,8 +5,8 @@
  * Contains the closing of the id=main div and all content after
  *
  * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @subpackage Snowberry
+ * @since Snowberry 1.0
  */
 ?>
 
@@ -22,7 +22,7 @@
 			?>
 
 			<div id="site-generator">
-				<?php do_action( 'twentyeleven_credits' ); ?>
+				<?php do_action( 'snowberry_credits' ); ?>
 				Design by <a href="http://stfalcon.com" style="text-decoration: underline;">stfalcon.com</a><br>
 				Powered by <a href="http://wordpress.org" style="text-decoration: underline;">WordPress</a>
 			</div>
