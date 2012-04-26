@@ -1184,6 +1184,9 @@ img.size-full {
 	margin-right:20px;
 	margin-bottom:20px;
 }
+.entry-content p img .wp-smiley{
+	margin: 0;
+}
 img.alignleft,
 img.alignright,
 img.aligncenter {
