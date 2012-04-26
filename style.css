@@ -1184,7 +1184,7 @@ img.size-full {
 img.alignleft,
 img.alignright,
 img.aligncenter {
-	margin-bottom: 0.94em !important;
+	margin-bottom: 0.94em;
 }
 img.aligncenter {
 	margin-right: auto !important;
@@ -1571,6 +1571,7 @@ blockquote.pull {
 .indexed.format-image .entry-meta span.tag-links,
 .indexed.format-image .entry-meta span.comments-link {
 	display: block;
+    font-size: 12px;
 }
 .indexed.format-image footer.entry-meta a {
 	color: #444;
