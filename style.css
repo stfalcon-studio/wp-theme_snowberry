@@ -986,6 +986,9 @@ footer.entry-meta .sep{
 .single-author .entry-meta .by-author {
 	display: none;
 }
+.entry-meta .by-author .sep {
+    display: inline;
+}
 .entry-content a{
 	text-decoration:underline;
 	}
