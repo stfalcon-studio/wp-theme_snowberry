@@ -1,7 +1,7 @@
 /*
 Theme Name: Snowberry
 Theme URI: http://wordpress.org/
-Description: Simple and clean wordpress theme with nice contrast headers. Good readability  of text. Perfect theme for personal blogs. Based on HTML of Twenty Eleven.
+Description: Simple and clean wordpress theme with nice contrast headers. Good readability  of text. Perfect theme for personal blogs. Based on HTML of Snowberry.
 Author: web studio stfalcon.com
 Author URI: http://stfalcon.com/
 Version: 1.0.2
@@ -473,8 +473,8 @@ code, pre {
 	line-height: 19px !important;
 	margin-bottom: 1.625em;
 	overflow: auto;
-	display:block;
-	padding: 0 1.625em;
+	/*display:block;*/
+	/*padding: 0 1.625em;*/
 }
 pre{
 	background:#fff;
@@ -639,7 +639,7 @@ a:hover {
 	/*background: #000;
 	background: -moz-linear-gradient(#252525, #0a0a0a);
 	background: -o-linear-gradient(#252525, #0a0a0a);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a));
 	background: -webkit-linear-gradient(#252525, #0a0a0a);
 	-webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 1px 2px;
@@ -771,10 +771,10 @@ a:hover {
 }
 #access .current_page_item > a {
 	/*font-weight: bold;*/
-	background: #f2f2f2; 
+	background: #f2f2f2;
 	background: -moz-linear-gradient(#e4e4e4, #f2f2f2);
 	background: -o-linear-gradient(#e4e4e4, #f2f2f2);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e4e4e4), to(#f2f2f2)); 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e4e4e4), to(#f2f2f2));
 	background: -webkit-linear-gradient(#e4e4e4, #f2f2f2);
 	color: #000;
 }
@@ -956,7 +956,7 @@ footer.entry-meta .sep{
 	font-family:'Open sans', arial, sans-serif;
 	color:#999999;
 	font-size:12px;
-	
+
 }
 .entry-meta .comments-link{
 	font-size:1.25em;
@@ -985,6 +985,9 @@ footer.entry-meta .sep{
 }
 .single-author .entry-meta .by-author {
 	display: none;
+}
+.entry-meta .by-author .sep {
+    display: inline;
 }
 .entry-content a{
 	text-decoration:underline;
@@ -1016,7 +1019,7 @@ footer.entry-meta .sep{
 	list-style:none;
 	background:url(images/ul-list-slyle.gif) 0 .7em no-repeat;
 	padding-left:1.2em;
-	margin-bottom: 0.5em;
+	/*margin-bottom: 0.5em;*/
 }
 .entry-content h1{
 	font-size:27px;
@@ -1036,7 +1039,7 @@ footer.entry-meta .sep{
 	font-size:18px;
 	margin:0 0 .05em;
 	font-weight:bold;
-} 
+}
 .entry-content h3,
 .comment-content h3 {
 }
@@ -1186,7 +1189,12 @@ img.alignright,
 img.aligncenter {
 	margin-bottom: 0.94em;
 }
-
+img.aligncenter {
+	margin-right: auto !important;
+}
+img.alignnone {
+    vertical-align: inherit;
+}
 p img,
 .wp-caption {
 	margin-top: 0.4em;
@@ -1566,6 +1574,7 @@ blockquote.pull {
 .indexed.format-image .entry-meta span.tag-links,
 .indexed.format-image .entry-meta span.comments-link {
 	display: block;
+    font-size: 12px;
 }
 .indexed.format-image footer.entry-meta a {
 	color: #444;
@@ -2131,17 +2140,17 @@ section.recent-posts .other-recent-posts li:after {
 
 /* Ephemera Widget */
 section.ephemera ol,
-.widget_twentyeleven_ephemera ol {
+.widget_snowberry_ephemera ol {
 	list-style: square;
 	margin: 5px 0 0;
 }
-.widget_twentyeleven_ephemera .widget-entry-title {
+.widget_snowberry_ephemera .widget-entry-title {
 	font-size: 15px;
 	font-weight: bold;
 	padding: 0;
 }
-.widget_twentyeleven_ephemera .comments-link a,
-.widget_twentyeleven_ephemera .comments-link > span {
+.widget_snowberry_ephemera .comments-link a,
+.widget_snowberry_ephemera .comments-link > span {
 	color: #666;
 	display: block;
 	font-size: 10px;
@@ -2150,7 +2159,7 @@ section.ephemera ol,
 	text-transform: uppercase;
 }
 section.ephemera .entry-title .comments-link a:hover,
-.widget_twentyeleven_ephemera .entry-title .comments-link a:hover {
+.widget_snowberry_ephemera .entry-title .comments-link a:hover {
 }
 section.ephemera .entry-title a span {
 	color: #29628d;
@@ -2219,7 +2228,7 @@ section.ephemera .entry-title a span {
 	font-weight:bold;
 	font-family:'Open Sans', arial, sans-serif;
 }
-#comments-title a{	
+#comments-title a{
 	vertical-align:middle;
 	font-size:12px;
 	text-decoration:none;
@@ -2277,7 +2286,7 @@ section.ephemera .entry-title a span {
 			margin:.69em;
 			}
 	article.comment .reply{
-		
+
 		}
 *+ html .reply .comment-reply-link{display:inline; zoom:1;}
 		.reply .comment-reply-link{
@@ -2363,7 +2372,7 @@ section.ephemera .entry-title a span {
 }
 .content .commentlist,
 .page-template-sidebar-page-php .commentlist {
-	width: 100%; 
+	width: 100%;
 }
 .commentlist > li.comment {
 	background: #f6f6f6;
@@ -2730,7 +2739,23 @@ p.comment-form-comment {
 	margin: 0 7px;
 	width: 16px;
 }
-
+.made-by {
+    color: #999;
+    font-size: 13px;
+    padding: 6px 0 0;
+    vertical-align: middle;
+}
+.made-by a {
+    color: #6A747C;
+    font-size: 12px;
+    text-decoration: none;
+}
+.made-by a img {
+    margin: 0 3px 0 0;
+    position: relative;
+    top: -1px;
+    vertical-align: bottom;
+}
 
 /* =Responsive Structure
 ----------------------------------------------- */
@@ -3188,8 +3213,8 @@ p.comment-form-comment {
 		.nav-next a:hover{
 			background:url(images/pagination_sprite.png) 0 -27px no-repeat;
 			}
-		
-		
+
+
 .wp-paginate{
 	display:block;
 	overflow:hidden;
@@ -3324,5 +3349,5 @@ p.comment-form-comment {
 			background:url(images/cloud-sprite.png) -18px -41px no-repeat;
 			}
 	*+ html .comment-form-header a{display:inline; zoom:1;}
-	
-	
+
+
