@@ -140,47 +140,42 @@ function snowberry_setup() {
 
 	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
 	register_default_headers( array(
-		'strawberry' => array(
-			'url' => '%s/images/headers/strawberry.jpg',
-			'thumbnail_url' => '%s/images/headers/strawberry-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'strawberry', 'snowberry' )
-		)/*,
-		'shore' => array(
-			'url' => '%s/images/headers/shore.jpg',
-			'thumbnail_url' => '%s/images/headers/shore-thumbnail.jpg',
-			'description' => __( 'Shore', 'snowberry' )
-		),
-		'trolley' => array(
-			'url' => '%s/images/headers/trolley.jpg',
-			'thumbnail_url' => '%s/images/headers/trolley-thumbnail.jpg',
-			'description' => __( 'Trolley', 'snowberry' )
-		),
-		'pine-cone' => array(
-			'url' => '%s/images/headers/pine-cone.jpg',
-			'thumbnail_url' => '%s/images/headers/pine-cone-thumbnail.jpg',
-			'description' => __( 'Pine Cone', 'snowberry' )
-		),
-		'chessboard' => array(
-			'url' => '%s/images/headers/chessboard.jpg',
-			'thumbnail_url' => '%s/images/headers/chessboard-thumbnail.jpg',
-			'description' => __( 'Chessboard', 'snowberry' )
-		),
-		'lanterns' => array(
-			'url' => '%s/images/headers/lanterns.jpg',
-			'thumbnail_url' => '%s/images/headers/lanterns-thumbnail.jpg',
-			'description' => __( 'Lanterns', 'snowberry' )
-		),
-		'willow' => array(
-			'url' => '%s/images/headers/willow.jpg',
-			'thumbnail_url' => '%s/images/headers/willow-thumbnail.jpg',
-			'description' => __( 'Willow', 'snowberry' )
-		),
-		'hanoi' => array(
-			'url' => '%s/images/headers/hanoi.jpg',
-			'thumbnail_url' => '%s/images/headers/hanoi-thumbnail.jpg',
-			'description' => __( 'Hanoi Plant', 'snowberry' )
-		)*/
+        'drops' => array(
+            'url'           => '%s/images/headers/drops.jpg',
+            'thumbnail_url' => '%s/images/headers/drops-thumbnail.jpg',
+            /* translators: header image description */
+            'description'   => __('drops', 'snowberry')
+        ),
+        'maple-leaves' => array(
+            'url'           => '%s/images/headers/maple-leaves.jpg',
+            'thumbnail_url' => '%s/images/headers/maple-leaves-thumbnail.jpg',
+            /* translators: header image description */
+            'description'   => __('maple-leaves', 'snowberry')
+        ),
+        'red-leaves' => array(
+            'url'           => '%s/images/headers/red-leaves.jpg',
+            'thumbnail_url' => '%s/images/headers/red-leaves-thumbnail.jpg',
+            /* translators: header image description */
+            'description'   => __('red-leaves', 'snowberry')
+        ),
+        'stones' => array(
+            'url'           => '%s/images/headers/stones.jpg',
+            'thumbnail_url' => '%s/images/headers/stones-thumbnail.jpg',
+            /* translators: header image description */
+            'description'   => __('stones', 'snowberry')
+        ),
+        'strawberry' => array(
+      			'url' => '%s/images/headers/strawberry.jpg',
+      			'thumbnail_url' => '%s/images/headers/strawberry-thumbnail.jpg',
+      			/* translators: header image description */
+      			'description' => __( 'strawberry', 'snowberry' )
+        ),
+        'sunrise' => array(
+            'url'           => '%s/images/headers/sunrise.jpg',
+            'thumbnail_url' => '%s/images/headers/sunrise-thumbnail.jpg',
+            /* translators: header image description */
+            'description'   => __('sunrise', 'snowberry')
+        )
 	) );
 }
 endif; // snowberry_setup
