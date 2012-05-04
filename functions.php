@@ -76,10 +76,10 @@ function snowberry_setup() {
 	/* Make Snowberry available for translation.
 	 * Translations can be added to the /languages/ directory.
 	 */
-	load_theme_textdomain( 'snowberry', TEMPLATEPATH . '/languages' );
+	load_theme_textdomain( 'snowberry', get_template_directory() . '/languages' );
 
 	$locale = get_locale();
-	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
+	$locale_file = get_template_directory() . "/languages/$locale.php";
 	if ( is_readable( $locale_file ) )
 		require_once( $locale_file );
 
