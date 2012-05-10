@@ -172,7 +172,7 @@ body {
 }
 .inner-page #content{
 	margin:0 34% 0 5%;
-width:62%;
+    width:62%;
 }
 .left-sidebar.inner-page #content{
 	margin:0 5% 0 34%;
@@ -779,7 +779,7 @@ a:hover {
 #access li li:hover > a,
 #access ul ul :hover > a,
 #access a:focus {
-	background: none !important;
+	background: none;
 	color:#008FD2;
 }
 #access li:hover > a,
