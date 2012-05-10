@@ -2288,11 +2288,11 @@ section.ephemera .entry-title a span {
 .commentlist #reply-title{
 	font-size:21px;
 }
-.commentlist li{
+.commentlist li.comment{
 	margin:0 0 0 80px;
 	list-style:none;
 	}
-.commentlist li li{
+.commentlist li.comment li.comment{
 	margin:0 0 0 20px;
 	}
 .commentlist article.comment{
@@ -2310,7 +2310,7 @@ section.ephemera .entry-title a span {
 		color:#000;
 		}
 		article.comment .comment-content p{
-			margin:.69em;
+			margin:.69em 0;
 			}
 	article.comment .reply{
 
