@@ -2766,24 +2766,6 @@ p.comment-form-comment {
 	margin: 0 7px;
 	width: 16px;
 }
-.made-by {
-    color: #999;
-    font-size: 13px;
-    padding: 6px 0 0;
-    vertical-align: middle;
-}
-.made-by a {
-    color: #6A747C;
-    font-size: 12px;
-    text-decoration: none;
-}
-.made-by a img {
-    margin: 0 3px 0 0;
-    position: relative;
-    top: -1px;
-    vertical-align: bottom;
-}
-
 /* =Responsive Structure
 ----------------------------------------------- */
 
