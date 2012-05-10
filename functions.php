@@ -140,42 +140,12 @@ function snowberry_setup() {
 
 	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
 	register_default_headers( array(
-        'drops' => array(
-            'url'           => '%s/images/headers/drops.jpg',
-            'thumbnail_url' => '%s/images/headers/drops-thumbnail.jpg',
+        'blackberries-fruit' => array(
+            'url'           => '%s/images/headers/blackberries-fruit.jpg',
+            'thumbnail_url' => '%s/images/headers/blackberries-fruit-thumbnail.jpg',
             /* translators: header image description */
-            'description'   => __('drops', 'snowberry')
+            'description'   => __('blackberries-fruit', 'snowberry')
         ),
-        'maple-leaves' => array(
-            'url'           => '%s/images/headers/maple-leaves.jpg',
-            'thumbnail_url' => '%s/images/headers/maple-leaves-thumbnail.jpg',
-            /* translators: header image description */
-            'description'   => __('maple-leaves', 'snowberry')
-        ),
-        'red-leaves' => array(
-            'url'           => '%s/images/headers/red-leaves.jpg',
-            'thumbnail_url' => '%s/images/headers/red-leaves-thumbnail.jpg',
-            /* translators: header image description */
-            'description'   => __('red-leaves', 'snowberry')
-        ),
-        'stones' => array(
-            'url'           => '%s/images/headers/stones.jpg',
-            'thumbnail_url' => '%s/images/headers/stones-thumbnail.jpg',
-            /* translators: header image description */
-            'description'   => __('stones', 'snowberry')
-        ),
-        'strawberry' => array(
-      			'url' => '%s/images/headers/strawberry.jpg',
-      			'thumbnail_url' => '%s/images/headers/strawberry-thumbnail.jpg',
-      			/* translators: header image description */
-      			'description' => __( 'strawberry', 'snowberry' )
-        ),
-        'sunrise' => array(
-            'url'           => '%s/images/headers/sunrise.jpg',
-            'thumbnail_url' => '%s/images/headers/sunrise-thumbnail.jpg',
-            /* translators: header image description */
-            'description'   => __('sunrise', 'snowberry')
-        )
 	) );
 }
 endif; // snowberry_setup
