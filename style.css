@@ -774,6 +774,7 @@ a:hover {
 	line-height: 1.4em;
 	padding: 10px 10px;
 	width: 168px;
+    word-wrap: break-word;
 }
 #access li li:hover > a,
 #access ul ul :hover > a,
