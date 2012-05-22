@@ -67,7 +67,6 @@ function snowberry_option_page_capability( $capability ) {
 	return 'edit_theme_options';
 }
 add_filter( 'option_page_capability_snowberry_options', 'snowberry_option_page_capability' );
-
 /**
  * Add our theme options page to the admin menu, including some help documentation.
  *
@@ -76,18 +75,34 @@ add_filter( 'option_page_capability_snowberry_options', 'snowberry_option_page_c
  * @since Snowberry 1.0
  */
 function snowberry_theme_options_add_page() {
+
+    global $theme_page;
+
 	$theme_page = add_theme_page(
 		__( 'Theme Options', 'snowberry' ),   // Name of page
 		__( 'Theme Options', 'snowberry' ),   // Label in menu
-		'edit_theme_options',                    // Capability required
-		'theme_options',                         // Menu slug, used to uniquely identify the page
+		'edit_theme_options',                 // Capability required
+		'theme_options',                      // Menu slug, used to uniquely identify the page
 		'snowberry_theme_options_render_page' // Function that renders the options page
 	);
 
-	if ( ! $theme_page )
-		return;
+    // Adds snowberry_theme_add_help_tab when snowberry_theme_options_add_page loads
+    if ( $theme_page )
+        add_action('load-' . $theme_page, 'snowberry_theme_add_help_tab');
+}
+add_action( 'admin_menu', 'snowberry_theme_options_add_page' );
 
-	$help = '<p>' . __( 'Some themes provide customization options that are grouped together on a Theme Options screen. If you change themes, options may change or disappear, as they are theme-specific. Your current theme, Snowberry, provides the following Theme Options:', 'snowberry' ) . '</p>' .
+/**
+ * Add help contextual information for the themes options page
+ *
+ * @since Snowberry 1.1.1
+ */
+function snowberry_theme_add_help_tab() {
+    get_current_screen()->add_help_tab(array(
+       'id'      => 'snowberry_theme_options_help',
+       'title'   => __( 'Special Instructions', 'snowberry' ),
+       'content' =>
+            '<p>' . __( 'Some themes provide customization options that are grouped together on a Theme Options screen. If you change themes, options may change or disappear, as they are theme-specific. Your current theme, Snowberry, provides the following Theme Options:', 'snowberry' ) . '</p>' .
 			'<ol>' .
 				'<li>' . __( '<strong>Color Scheme</strong>: You can choose a color palette of "Light" (light background with dark text) or "Dark" (dark background with light text) for your site.', 'snowberry' ) . '</li>' .
 				'<li>' . __( '<strong>Link Color</strong>: You can choose the color used for text links on your site. You can enter the HTML color or hex code, or you can choose visually by clicking the "Select a Color" button to pick from a color wheel.', 'snowberry' ) . '</li>' .
@@ -96,11 +111,10 @@ function snowberry_theme_options_add_page() {
 			'<p>' . __( 'Remember to click "Save Changes" to save any changes you have made to the theme options.', 'snowberry' ) . '</p>' .
 			'<p><strong>' . __( 'For more information:', 'snowberry' ) . '</strong></p>' .
 			'<p>' . __( '<a href="http://codex.wordpress.org/Appearance_Theme_Options_Screen" target="_blank">Documentation on Theme Options</a>', 'snowberry' ) . '</p>' .
-			'<p>' . __( '<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'snowberry' ) . '</p>';
-
-	add_contextual_help( $theme_page, $help );
+			'<p>' . __( '<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'snowberry' ) . '</p>'
+    ));
 }
-add_action( 'admin_menu', 'snowberry_theme_options_add_page' );
+
 
 /**
  * Returns an array of color schemes registered for Snowberry.

@@ -622,7 +622,7 @@ msgid "Snowberry"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://wordpress.org/extend/themes/snowberry"
+msgid "https://github.com/stfalcon-studio/wp-theme_snowberry/downloads"
 msgstr ""
 
 #. Description of the plugin/theme

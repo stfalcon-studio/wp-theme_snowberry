@@ -1,16 +1,40 @@
 /*
 Theme Name: Snowberry
-Theme URI: http://wordpress.org/
+Theme URI: https://github.com/stfalcon-studio/wp-theme_snowberry/downloads
 Description: Simple and clean wordpress theme with nice contrast headers. Good readability  of text. Perfect theme for personal blogs. Based on HTML of Snowberry.
 Author: web studio stfalcon.com
 Author URI: http://stfalcon.com/
-Version: 1.1.0
+Version: 1.1.1
 Tags: light, white, silver, fixed-width, one-column, two-columns, right-sidebar
 
 License: GNU General Public License
 License URI: license.txt
 */
-
+/** google fonts (Open Sans) **/
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzIraN7vELC11_xip9Rz-hMs.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxq6JHp92iES8exGTOIyTn1A.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/RjgO7rYTmqiVp7vzi-Q5UT8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxlRROVH9Vvc8xHnAGvvgPQc.woff') format('woff');
+}
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 
@@ -148,7 +172,7 @@ body {
 }
 .inner-page #content{
 	margin:0 34% 0 5%;
-width:62%;
+    width:62%;
 }
 .left-sidebar.inner-page #content{
 	margin:0 5% 0 34%;
@@ -750,11 +774,12 @@ a:hover {
 	line-height: 1.4em;
 	padding: 10px 10px;
 	width: 168px;
+    word-wrap: break-word;
 }
 #access li li:hover > a,
 #access ul ul :hover > a,
 #access a:focus {
-	background: none !important;
+	background: none;
 	color:#008FD2;
 }
 #access li:hover > a,
@@ -2260,11 +2285,11 @@ section.ephemera .entry-title a span {
 .commentlist #reply-title{
 	font-size:21px;
 }
-.commentlist li{
+.commentlist li.comment{
 	margin:0 0 0 80px;
 	list-style:none;
 	}
-.commentlist li li{
+.commentlist li.comment li.comment{
 	margin:0 0 0 20px;
 	}
 .commentlist article.comment{
@@ -2282,7 +2307,7 @@ section.ephemera .entry-title a span {
 		color:#000;
 		}
 		article.comment .comment-content p{
-			margin:.69em;
+			margin:.69em 0;
 			}
 	article.comment .reply{
 
@@ -2738,24 +2763,6 @@ p.comment-form-comment {
 	margin: 0 7px;
 	width: 16px;
 }
-.made-by {
-    color: #999;
-    font-size: 13px;
-    padding: 6px 0 0;
-    vertical-align: middle;
-}
-.made-by a {
-    color: #6A747C;
-    font-size: 12px;
-    text-decoration: none;
-}
-.made-by a img {
-    margin: 0 3px 0 0;
-    position: relative;
-    top: -1px;
-    vertical-align: bottom;
-}
-
 /* =Responsive Structure
 ----------------------------------------------- */
 

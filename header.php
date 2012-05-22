@@ -52,6 +52,10 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 <?php
+    if (!is_admin()) {
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('snowberry-jsscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
+    }
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
 	 */
@@ -65,11 +69,6 @@
 	 */
 	wp_head();
 ?>
-<!--google fonts (Open Sans)-->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700&amp;subset=latin,cyrillic&amp;v2' rel='stylesheet' type='text/css'>
-
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery-1.6.2.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
