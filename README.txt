@@ -2,7 +2,13 @@
 
 * by stfalcon team, http://stfalcon.com
 
-Thanks to the http://www.photl.com for the nice images.
-License: images/headers/LICENSE.txt
+Google Web font used is Open Sans.
+
+Header images used from Copyright free images (http://www.copyright-free-images.com)
+
+* Default Header Image *
+Image name:   Blackberries fruit
+Image author: Paolo Neo
+Image URI:    http://www.copyright-free-images.com/flora-plants-copyright-free-images/fruits-copyright-free-images/blackberries-free-images/blackberries-fruit.jpg.html
 
 == ABOUT SNOWBERRY ==
