@@ -14,9 +14,6 @@
  * @since Snowberry 1.0
  */
 
-// Enqueue showcase script for the slider
-wp_enqueue_script( 'snowberry-showcase', get_template_directory_uri() . '/js/showcase.js', array( 'jquery' ), '2011-04-28' );
-
 get_header(); ?>
 
 		<div id="primary" class="showcase">

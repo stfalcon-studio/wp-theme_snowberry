@@ -554,3 +554,46 @@ function snowberry_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'snowberry_body_classes' );
 
+/**
+ * Adds Google fonts styles
+ */
+function snowberry_google_font() {
+    wp_enqueue_style('open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700&amp;subset=latin,cyrillic&amp;v2');
+}
+add_action('wp_enqueue_scripts', 'snowberry_google_font');
+
+/**
+ * Adds html5.js into the javascript queue
+ */
+function snowberry_head() {
+    ?>
+    <!--[if lt IE 9]>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<?php
+}
+add_action('wp_head', 'snowberry_head');
+
+/**
+ *
+ */
+function snowberry_scripts()
+{
+    global $post;
+    if (!is_admin()) {
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('snowberry-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
+    }
+    /* We add some JavaScript to pages with the comment form
+    * to support sites with threaded comments (when in use).
+    */
+    if (is_singular() && get_option('thread_comments'))
+        wp_enqueue_script('comment-reply');
+
+    if (is_page()) {
+        $current_template = get_post_meta($post->ID, '_wp_page_template', true);
+        if ($current_template == 'showcase.php')
+            wp_enqueue_script('snowberry-showcase', get_template_directory_uri() . '/js/showcase.js', array('jquery'), '2011-04-28');
+    }
+}
+add_action('wp_enqueue_scripts', 'snowberry_scripts');
