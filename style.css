@@ -2033,7 +2033,6 @@ section.recent-posts .other-recent-posts li:after {
 
 /* Singular navigation */
 #nav-single {
-	float: right;
 	position: relative;
 	top: -0.3em;
 	text-align: right;
@@ -2042,7 +2041,6 @@ section.recent-posts .other-recent-posts li:after {
 }
 #nav-single .nav-previous,
 #nav-single .nav-next {
-	float: none;
 	width: auto;
 }
 #nav-single .nav-next {
