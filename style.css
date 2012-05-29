@@ -1172,7 +1172,6 @@ img[class*="wp-image-"] {
 }
 img.size-full {
 	max-width: 97.5%;
-	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 .entry-content img.wp-smiley {
 	border: none;
