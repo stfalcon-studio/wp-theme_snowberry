@@ -22,7 +22,7 @@ get_header(); ?>
 					<?php
 						$category_description = category_description();
 						if ( ! empty( $category_description ) )
-							echo apply_filters( 'category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
+							echo apply_filters( 'snowberry_category_archive_meta', '<div class="category-archive-meta">' . $category_description . '</div>' );
 					?>
 				</header>
 

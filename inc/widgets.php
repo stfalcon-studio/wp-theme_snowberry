@@ -49,7 +49,7 @@ class Snowberry_Ephemera_Widget extends WP_Widget {
 		ob_start();
 		extract( $args, EXTR_SKIP );
 
-		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'Ephemera', 'snowberry' ) : $instance['title'], $instance, $this->id_base);
+		$title = apply_filters( 'snowberry_widget_title', empty( $instance['title'] ) ? __( 'Ephemera', 'snowberry' ) : $instance['title'], $instance, $this->id_base);
 
 		if ( ! isset( $instance['number'] ) )
 			$instance['number'] = '10';
