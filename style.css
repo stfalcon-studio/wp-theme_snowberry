@@ -1299,14 +1299,15 @@ a:active img[class*="wp-image-"],
 	overflow: hidden;
 }
 .singular #author-info {
-	background: #f9f9f9;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	margin: 2.2em -35.6% 0 -35.4%;
-	padding: 20px 35.4%;
+	border-top: 1px dashed #ccc;
+	margin: 2.2em 0 0;
+	padding: 20px 0;
+}
+.singular #author-info #author-link {
+    margin-top: 5px;
 }
 .archive #author-info {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px dashed #ccc;
 	margin: 0 0 2.2em;
 	padding: 0 0 2.2em;
 }
@@ -2099,6 +2100,9 @@ section.recent-posts .other-recent-posts li:after {
 	list-style:none;
 	padding: 0 0 12px 0;
 }
+.entry-content .widget ul li {
+    padding: 0 0 0 1.2em;
+}
 .widget a {
 	font-weight: normal;
 	color:#497489;
@@ -2260,6 +2264,9 @@ section.ephemera .entry-title a span {
 }
 .commentlist #reply-title{
 	font-size:21px;
+}
+.commentlist li.pingback{
+    margin:0 0 0 22px;
 }
 .commentlist li.comment{
 	margin:0 0 0 80px;
@@ -2818,11 +2825,6 @@ p.comment-form-comment {
 	}
 	.singular .pull.alignright {
 		margin: 0 0 0 1.625em;
-	}
-	.singular .entry-meta .edit-link a {
-		/*left: 0;
-		position: absolute;
-		top: 40px;*/
 	}
 	.singular #author-info {
 		margin: 2.2em -8.8% 0;
