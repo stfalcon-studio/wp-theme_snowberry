@@ -2,8 +2,8 @@
 /**
  * The Footer widget areas.
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 ?>

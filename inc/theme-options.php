@@ -2,8 +2,8 @@
 /**
  * Snowberry Theme Options
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 

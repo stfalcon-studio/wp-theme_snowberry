@@ -4,8 +4,8 @@
  *
  * Learn more: http://codex.wordpress.org/Widgets_API#Developing_Widgets
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 class Snowberry_Ephemera_Widget extends WP_Widget {

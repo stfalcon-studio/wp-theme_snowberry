@@ -7,8 +7,8 @@
  * handled by a callback to snowberry_comment() which is
  * located in the functions.php file.
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 ?>

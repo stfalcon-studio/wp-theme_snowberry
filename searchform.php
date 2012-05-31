@@ -2,8 +2,8 @@
 /**
  * The template for displaying search forms in Snowberry
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 ?>

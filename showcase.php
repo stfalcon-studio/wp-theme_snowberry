@@ -9,8 +9,8 @@
  *
  * We are creating two queries to fetch the proper posts and a custom widget for the sidebar.
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 
