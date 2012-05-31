@@ -597,3 +597,29 @@ function snowberry_scripts()
     }
 }
 add_action('wp_enqueue_scripts', 'snowberry_scripts');
+
+/*
+ * Print the <title> tag based on what is being viewed.
+ *
+ * filter function for wp_title
+ */
+function snowberry_filter_wp_title($title, $sep) {
+
+    global $page, $paged;
+
+    $insert = '';
+
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo('description', 'display');
+    if ($site_description && (is_home() || is_front_page())) {
+        $insert .= " $sep $site_description";
+    }
+
+    // Add a page number if necessary:
+    if ($paged >= 2 || $page >= 2){
+        $insert .= " $sep " . sprintf(__('Page %s', 'snowberry'), max($paged, $page));
+    }
+
+    return $title . get_bloginfo('name') . $insert;
+}
+add_filter('wp_title', 'snowberry_filter_wp_title', 10, 2);
