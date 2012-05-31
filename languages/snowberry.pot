@@ -129,11 +129,11 @@ msgid "http://wordpress.org/"
 msgstr ""
 
 #: footer.php:26
-msgid "Semantic Personal Publishing Platform"
+msgid "Powered by"
 msgstr ""
 
-#: footer.php:26
-msgid "Proudly powered by %s"
+#: footer.php:27
+msgid "Designed by"
 msgstr ""
 
 #: category.php:19
