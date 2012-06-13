@@ -265,7 +265,7 @@ function snowberry_theme_options_render_page() {
 							<input type="text" name="snowberry_theme_options[link_color]" id="link-color" value="<?php echo esc_attr( $options['link_color'] ); ?>" />
 							<a href="#" class="pickcolor hide-if-no-js" id="link-color-example"></a>
 							<input type="button" class="pickcolor button hide-if-no-js" value="<?php esc_attr_e( 'Select a Color', 'snowberry' ); ?>" />
-							<div id="colorPickerDiv" style="z-index: 100; background:#eee; border:1px solid #ccc; position:absolute; display:none;"></div>
+							<div id="colorPickerDiv"></div>
 							<br />
 							<span><?php printf( __( 'Default color: %s', 'snowberry' ), '<span id="default-color">' . snowberry_get_default_link_color( $options['color_scheme'] ) . '</span>' ); ?></span>
 						</fieldset>

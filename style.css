@@ -2735,7 +2735,7 @@ p.comment-form-comment {
 #site-generator a {
 	color: #999999;
 	font-weight: normal;
-	text-decoration:none;
+	text-decoration: underline;
 }
 #site-generator .sep {
 	background: url(images/wordpress.png) center left no-repeat;
@@ -3333,5 +3333,3 @@ p.comment-form-comment {
 			background:url(images/cloud-sprite.png) -18px -41px no-repeat;
 			}
 	*+ html .comment-form-header a{display:inline; zoom:1;}
-
-

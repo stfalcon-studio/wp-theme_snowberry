@@ -23,8 +23,8 @@
 
 			<div id="site-generator">
 				<?php do_action( 'snowberry_credits' ); ?>
-                <?php _e( 'Powered by', 'snowberry' ); ?>  <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'snowberry' ) ); ?>" style="text-decoration: underline;">WordPress</a><br>
-                <?php _e( 'Designed by', 'snowberry' ); ?> <a href="http://stfalcon.com/" target="_blank" style="text-decoration: underline;">stfalcon.com</a>
+                <?php _e( 'Powered by', 'snowberry' ); ?>  <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'snowberry' ) ); ?>">WordPress</a><br>
+                <?php _e( 'Designed by', 'snowberry' ); ?> <a href="http://stfalcon.com/" target="_blank">stfalcon.com</a>
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
