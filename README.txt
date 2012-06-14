@@ -13,9 +13,9 @@ Google Web font used is Open Sans.
 
 == Theme URIs  ==
 
-Download:  https://github.com/stfalcon-studio/wp-theme_snowberry/downloads
-Demo site: http://snowberry.dev.stfalcon.com
-
+Download URI:    https://github.com/stfalcon-studio/wp-theme_snowberry/downloads
+Demo site URI:   http://snowberry.dev.stfalcon.com
+About theme URI: http://snowberry.dev.stfalcon.com/about-theme/
 
 == License information =
 License:GNU General Public License, v2 (or newer)
