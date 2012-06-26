@@ -2098,7 +2098,7 @@ section.recent-posts .other-recent-posts li:after {
 	background:url(images/widget-list.png) 0 20px no-repeat;
 }
 .widget ul li {
-	color: #fff;
+	color: #666;
 	font-size: 13px;
 	list-style:none;
 	padding: 0 0 12px 0;
