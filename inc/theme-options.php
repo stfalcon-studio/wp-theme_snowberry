@@ -104,7 +104,6 @@ function snowberry_theme_add_help_tab() {
        'content' =>
             '<p>' . __( 'Some themes provide customization options that are grouped together on a Theme Options screen. If you change themes, options may change or disappear, as they are theme-specific. Your current theme, Snowberry, provides the following Theme Options:', 'snowberry' ) . '</p>' .
 			'<ol>' .
-				'<li>' . __( '<strong>Color Scheme</strong>: You can choose a color palette of "Light" (light background with dark text) or "Dark" (dark background with light text) for your site.', 'snowberry' ) . '</li>' .
 				'<li>' . __( '<strong>Link Color</strong>: You can choose the color used for text links on your site. You can enter the HTML color or hex code, or you can choose visually by clicking the "Select a Color" button to pick from a color wheel.', 'snowberry' ) . '</li>' .
 				'<li>' . __( '<strong>Default Layout</strong>: You can choose if you want your site&#8217;s default layout to have a sidebar on the left, the right, or not at all.', 'snowberry' ) . '</li>' .
 			'</ol>' .
@@ -113,31 +112,6 @@ function snowberry_theme_add_help_tab() {
 			'<p>' . __( '<a href="http://codex.wordpress.org/Appearance_Theme_Options_Screen" target="_blank">Documentation on Theme Options</a>', 'snowberry' ) . '</p>' .
 			'<p>' . __( '<a href="http://wordpress.org/support/" target="_blank">Support Forums</a>', 'snowberry' ) . '</p>'
     ));
-}
-
-
-/**
- * Returns an array of color schemes registered for Snowberry.
- *
- * @since Snowberry 1.0
- */
-function snowberry_color_schemes() {
-	$color_scheme_options = array(
-		'light' => array(
-			'value' => 'light',
-			'label' => __( 'Light', 'snowberry' ),
-			'thumbnail' => get_template_directory_uri() . '/inc/images/light.png',
-			'default_link_color' => '#1b8be0',
-		),
-		/*'dark' => array(
-			'value' => 'dark',
-			'label' => __( 'Dark', 'snowberry' ),
-			'thumbnail' => get_template_directory_uri() . '/inc/images/dark.png',
-			'default_link_color' => '#e4741f',
-		),*/
-	);
-
-	return apply_filters( 'snowberry_color_schemes', $color_scheme_options );
 }
 
 /**
@@ -174,8 +148,7 @@ function snowberry_layouts() {
  */
 function snowberry_get_default_theme_options() {
 	$default_theme_options = array(
-		'color_scheme' => 'light',
-		'link_color'   => snowberry_get_default_link_color( 'light' ),
+		'link_color'   => '#1b8be0',
 		'theme_layout' => 'content-sidebar',
 	);
 
@@ -183,27 +156,6 @@ function snowberry_get_default_theme_options() {
  		$default_theme_options['theme_layout'] = 'sidebar-content';
 
 	return apply_filters( 'snowberry_default_theme_options', $default_theme_options );
-}
-
-/**
- * Returns the default link color for Snowberry, based on color scheme.
- *
- * @since Snowberry 1.0
- *
- * @param $string $color_scheme Color scheme. Defaults to the active color scheme.
- * @return $string Color.
-*/
-function snowberry_get_default_link_color( $color_scheme = null ) {
-	if ( null === $color_scheme ) {
-		$options = snowberry_get_theme_options();
-		$color_scheme = $options['color_scheme'];
-	}
-
-	$color_schemes = snowberry_color_schemes();
-	if ( ! isset( $color_schemes[ $color_scheme ] ) )
-		return false;
-
-	return $color_schemes[ $color_scheme ]['default_link_color'];
 }
 
 /**
@@ -231,33 +183,9 @@ function snowberry_theme_options_render_page() {
 			<?php
 				settings_fields( 'snowberry_options' );
 				$options = snowberry_get_theme_options();
-				$default_options = snowberry_get_default_theme_options();
 			?>
 
 			<table class="form-table">
-
-				<tr valign="top" class="image-radio-option color-scheme"><th scope="row"><?php _e( 'Color Scheme', 'snowberry' ); ?></th>
-					<td>
-						<fieldset><legend class="screen-reader-text"><span><?php _e( 'Color Scheme', 'snowberry' ); ?></span></legend>
-						<?php
-							foreach ( snowberry_color_schemes() as $scheme ) {
-								?>
-								<div class="layout">
-								<label class="description">
-									<input type="radio" name="snowberry_theme_options[color_scheme]" value="<?php echo esc_attr( $scheme['value'] ); ?>" <?php checked( $options['color_scheme'], $scheme['value'] ); ?> />
-									<input type="hidden" id="default-color-<?php echo esc_attr( $scheme['value'] ); ?>" value="<?php echo esc_attr( $scheme['default_link_color'] ); ?>" />
-									<span>
-										<img src="<?php echo esc_url( $scheme['thumbnail'] ); ?>" width="136" height="122" alt="" />
-										<?php echo $scheme['label']; ?>
-									</span>
-								</label>
-								</div>
-								<?php
-							}
-						?>
-						</fieldset>
-					</td>
-				</tr>
 
 				<tr valign="top"><th scope="row"><?php _e( 'Link Color', 'snowberry' ); ?></th>
 					<td>
@@ -265,9 +193,9 @@ function snowberry_theme_options_render_page() {
 							<input type="text" name="snowberry_theme_options[link_color]" id="link-color" value="<?php echo esc_attr( $options['link_color'] ); ?>" />
 							<a href="#" class="pickcolor hide-if-no-js" id="link-color-example"></a>
 							<input type="button" class="pickcolor button hide-if-no-js" value="<?php esc_attr_e( 'Select a Color', 'snowberry' ); ?>" />
-							<div id="colorPickerDiv" style="z-index: 100; background:#eee; border:1px solid #ccc; position:absolute; display:none;"></div>
+							<div id="colorPickerDiv"></div>
 							<br />
-							<span><?php printf( __( 'Default color: %s', 'snowberry' ), '<span id="default-color">' . snowberry_get_default_link_color( $options['color_scheme'] ) . '</span>' ); ?></span>
+							<span><?php printf( __( 'Default color: %s', 'snowberry' ), '<span id="default-color">#1b8be0</span>' ); ?></span>
 						</fieldset>
 					</td>
 				</tr>
@@ -312,13 +240,6 @@ function snowberry_theme_options_render_page() {
 function snowberry_theme_options_validate( $input ) {
 	$output = $defaults = snowberry_get_default_theme_options();
 
-	// Color scheme must be in our array of color scheme options
-	if ( isset( $input['color_scheme'] ) && array_key_exists( $input['color_scheme'], snowberry_color_schemes() ) )
-		$output['color_scheme'] = $input['color_scheme'];
-
-	// Our defaults for the link color may have changed, based on the color scheme.
-	$output['link_color'] = $defaults['link_color'] = snowberry_get_default_link_color( $output['color_scheme'] );
-
 	// Link color must be 3 or 6 hexadecimal characters
 	if ( isset( $input['link_color'] ) && preg_match( '/^#?([a-f0-9]{3}){1,2}$/i', $input['link_color'] ) )
 		$output['link_color'] = '#' . strtolower( ltrim( $input['link_color'], '#' ) );
@@ -329,22 +250,6 @@ function snowberry_theme_options_validate( $input ) {
 
 	return apply_filters( 'snowberry_theme_options_validate', $output, $input, $defaults );
 }
-
-///**
-// * Enqueue the styles for the current color scheme.
-// *
-// * @since Snowberry 1.0
-// */
-//function snowberry_enqueue_color_scheme() {
-//	$options = snowberry_get_theme_options();
-//	$color_scheme = $options['color_scheme'];
-//
-//	if ( 'dark' == $color_scheme )
-//		wp_enqueue_style( 'dark', get_template_directory_uri() . '/colors/dark.css', array(), null );
-//
-//	do_action( 'snowberry_enqueue_color_scheme', $color_scheme );
-//}
-//add_action( 'wp_enqueue_scripts', 'snowberry_enqueue_color_scheme' );
 
 /**
  * Add a style block to the theme for the current link color.

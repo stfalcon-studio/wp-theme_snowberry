@@ -1,15 +1,18 @@
-/*
-Theme Name: Snowberry
-Theme URI: https://github.com/stfalcon-studio/wp-theme_snowberry/downloads
-Description: Simple and clean wordpress theme with nice contrast headers. Good readability  of text. Perfect theme for personal blogs. Based on HTML of Twenty Eleven theme.
-Author: web studio stfalcon.com
-Author URI: http://stfalcon.com/
-Version: 1.1.2
-Tags: light, white, silver, fixed-width, one-column, two-columns, right-sidebar
-
-License: GNU General Public License
-License URI: license.txt
-*/
+/**
+ * Theme Name:  Snowberry
+ * Theme URI:   http://snowberry.dev.stfalcon.com/about-theme/
+ * Description: Simple and clean wordpress theme with nice contrast headers. Good readability  of text. Perfect theme for personal blogs. Based on HTML of Twenty Eleven.
+ * Author:      web studio stfalcon.com
+ * Author URI:  http://stfalcon.com/
+ * Version:     1.1.3
+ * Tags:        light, white, silver, fixed-width, one-column, two-columns, right-sidebar
+ *
+ * License:     GNU General Public License
+ * License URI: license.txt
+ *
+ * Snowberry, (c) Web studio stfalcon.com
+ * Snowberry Theme is a derivative of Twenty Eleven, (c) The WordPress Team
+ */
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 
@@ -541,7 +544,6 @@ input[type=text] {
 	padding: 3px;
 }
 input#s {
-	background:#fff url(images/search-bg.gif) no-repeat 100% 0px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
@@ -553,7 +555,15 @@ input#s {
 	border-top-color:#929292;
 }
 input#searchsubmit {
-	display: none;
+    background: #fff url(images/search-bg.gif) no-repeat 100% 0px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    height: 23px;
+    width: 29px;
+    text-indent: -99999px;
 }
 
 /* Links */
@@ -829,9 +839,6 @@ a:hover {
 #branding #s:focus {
 	/*background-color: #f9f9f9;*/
 	/*width: 196px;*/
-}
-#branding #searchsubmit {
-	display: none;
 }
 #branding .only-search #searchform {
 	top: 5px;
@@ -2091,7 +2098,7 @@ section.recent-posts .other-recent-posts li:after {
 	background:url(images/widget-list.png) 0 20px no-repeat;
 }
 .widget ul li {
-	color: #fff;
+	color: #666;
 	font-size: 13px;
 	list-style:none;
 	padding: 0 0 12px 0;
@@ -2731,7 +2738,7 @@ p.comment-form-comment {
 #site-generator a {
 	color: #999999;
 	font-weight: normal;
-	text-decoration:none;
+	text-decoration: underline;
 }
 #site-generator .sep {
 	background: url(images/wordpress.png) center left no-repeat;
@@ -3329,5 +3336,3 @@ p.comment-form-comment {
 			background:url(images/cloud-sprite.png) -18px -41px no-repeat;
 			}
 	*+ html .comment-form-header a{display:inline; zoom:1;}
-
-

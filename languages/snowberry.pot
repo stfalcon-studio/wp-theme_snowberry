@@ -438,13 +438,6 @@ msgid ""
 "following Theme Options:"
 msgstr ""
 
-#: inc/theme-options.php:92
-msgid ""
-"<strong>Color Scheme</strong>: You can choose a color palette of \"Light"
-"\" (light background with dark text) or \"Dark\" (dark background with light "
-"text) for your site."
-msgstr ""
-
 #: inc/theme-options.php:93
 msgid ""
 "<strong>Link Color</strong>: You can choose the color used for text links on "
@@ -503,11 +496,6 @@ msgstr ""
 
 #: inc/theme-options.php:213
 msgid "%s Theme Options"
-msgstr ""
-
-#: inc/theme-options.php:225 inc/theme-options.php:227
-#: inc/theme-options.php:263
-msgid "Color Scheme"
 msgstr ""
 
 #: inc/theme-options.php:248 inc/theme-options.php:250
