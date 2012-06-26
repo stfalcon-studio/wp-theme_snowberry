@@ -38,15 +38,5 @@ var farbtastic;
 			pickColor( '#' + this.innerHTML.replace(/[^a-fA-F0-9]/, '') );
 			e.preventDefault();
 		});
-
-		$('.image-radio-option.color-scheme input:radio').change( function() {
-			var currentDefault = $('#default-color a'),
-				newDefault = $(this).next().val();
-
-			if ( $('#link-color').val() == currentDefault.text() )
-				pickColor( newDefault );
-
-			currentDefault.text( newDefault );
-		});
 	});
 })(jQuery);
