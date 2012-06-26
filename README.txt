@@ -10,7 +10,6 @@ Snowberry Theme is a derivative of Twenty Eleven, (c) The WordPress Team
 
 Google Web font used is Open Sans.
 
-
 == Theme URIs  ==
 
 Download URI:    https://github.com/stfalcon-studio/wp-theme_snowberry/downloads
@@ -24,8 +23,7 @@ Snowberry is distributed under the terms of the GNU GPL
 All images included are under the terms of the GNU GPL
 
 * The library html5shiv is dual licensed under the MIT or GPL Version 2 licenses.
-    * Header images used from Copyright free images (http://www.copyright-free-images.com)
-
+* Header images used from Copyright free images (http://www.copyright-free-images.com)
 * Default Header Image *
 Image name:   Blackberries fruit
 Image author: Paolo Neo
