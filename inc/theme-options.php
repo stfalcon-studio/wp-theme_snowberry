@@ -240,9 +240,6 @@ function snowberry_theme_options_render_page() {
 function snowberry_theme_options_validate( $input ) {
 	$output = $defaults = snowberry_get_default_theme_options();
 
-	// Our defaults for the link color may have changed, based on the color scheme.
-	$output['link_color'] = $defaults['link_color'] = '#1b8be0';
-
 	// Link color must be 3 or 6 hexadecimal characters
 	if ( isset( $input['link_color'] ) && preg_match( '/^#?([a-f0-9]{3}){1,2}$/i', $input['link_color'] ) )
 		$output['link_color'] = '#' . strtolower( ltrim( $input['link_color'], '#' ) );
