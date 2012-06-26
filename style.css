@@ -4,37 +4,12 @@ Theme URI: https://github.com/stfalcon-studio/wp-theme_snowberry/downloads
 Description: Simple and clean wordpress theme with nice contrast headers. Good readability  of text. Perfect theme for personal blogs. Based on HTML of Twenty Eleven theme.
 Author: web studio stfalcon.com
 Author URI: http://stfalcon.com/
-Version: 1.1.1
+Version: 1.1.2
 Tags: light, white, silver, fixed-width, one-column, two-columns, right-sidebar
 
 License: GNU General Public License
 License URI: license.txt
 */
-/** google fonts (Open Sans) **/
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzIraN7vELC11_xip9Rz-hMs.woff') format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxq6JHp92iES8exGTOIyTn1A.woff') format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/RjgO7rYTmqiVp7vzi-Q5UT8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url('http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxlRROVH9Vvc8xHnAGvvgPQc.woff') format('woff');
-}
 /* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
 -------------------------------------------------------------- */
 
@@ -1197,7 +1172,6 @@ img[class*="wp-image-"] {
 }
 img.size-full {
 	max-width: 97.5%;
-	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
 }
 .entry-content p img{
 	margin-right:20px;
@@ -1321,14 +1295,15 @@ a:active img[class*="wp-image-"],
 	overflow: hidden;
 }
 .singular #author-info {
-	background: #f9f9f9;
-	border-top: 1px solid #ddd;
-	border-bottom: 1px solid #ddd;
-	margin: 2.2em -35.6% 0 -35.4%;
-	padding: 20px 35.4%;
+	border-top: 1px dashed #ccc;
+	margin: 2.2em 0 0;
+	padding: 20px 0;
+}
+.singular #author-info #author-link {
+    margin-top: 5px;
 }
 .archive #author-info {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px dashed #ccc;
 	margin: 0 0 2.2em;
 	padding: 0 0 2.2em;
 }
@@ -2054,7 +2029,6 @@ section.recent-posts .other-recent-posts li:after {
 
 /* Singular navigation */
 #nav-single {
-	float: right;
 	position: relative;
 	top: -0.3em;
 	text-align: right;
@@ -2063,7 +2037,6 @@ section.recent-posts .other-recent-posts li:after {
 }
 #nav-single .nav-previous,
 #nav-single .nav-next {
-	float: none;
 	width: auto;
 }
 #nav-single .nav-next {
@@ -2122,6 +2095,9 @@ section.recent-posts .other-recent-posts li:after {
 	font-size: 13px;
 	list-style:none;
 	padding: 0 0 12px 0;
+}
+.entry-content .widget ul li {
+    padding: 0 0 0 1.2em;
 }
 .widget a {
 	font-weight: normal;
@@ -2284,6 +2260,9 @@ section.ephemera .entry-title a span {
 }
 .commentlist #reply-title{
 	font-size:21px;
+}
+.commentlist li.pingback{
+    margin:0 0 0 22px;
 }
 .commentlist li.comment{
 	margin:0 0 0 80px;
@@ -2842,11 +2821,6 @@ p.comment-form-comment {
 	}
 	.singular .pull.alignright {
 		margin: 0 0 0 1.625em;
-	}
-	.singular .entry-meta .edit-link a {
-		/*left: 0;
-		position: absolute;
-		top: 40px;*/
 	}
 	.singular #author-info {
 		margin: 2.2em -8.8% 0;

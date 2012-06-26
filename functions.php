@@ -33,8 +33,8 @@
  *
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 
@@ -554,3 +554,72 @@ function snowberry_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'snowberry_body_classes' );
 
+/**
+ * Adds Google fonts styles
+ */
+function snowberry_google_font() {
+    wp_enqueue_style('open-sans', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,700&amp;subset=latin,cyrillic&amp;v2');
+}
+add_action('wp_enqueue_scripts', 'snowberry_google_font');
+
+/**
+ * Adds html5.js into the javascript queue
+ */
+function snowberry_head() {
+    ?>
+    <!--[if lt IE 9]>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+<?php
+}
+add_action('wp_head', 'snowberry_head');
+
+/**
+ *
+ */
+function snowberry_scripts()
+{
+    global $post;
+    if (!is_admin()) {
+        wp_enqueue_script('jquery');
+        wp_enqueue_script('snowberry-scripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'));
+    }
+    /* We add some JavaScript to pages with the comment form
+    * to support sites with threaded comments (when in use).
+    */
+    if (is_singular() && get_option('thread_comments'))
+        wp_enqueue_script('comment-reply');
+
+    if (is_page()) {
+        $current_template = get_post_meta($post->ID, '_wp_page_template', true);
+        if ($current_template == 'showcase.php')
+            wp_enqueue_script('snowberry-showcase', get_template_directory_uri() . '/js/showcase.js', array('jquery'), '2011-04-28');
+    }
+}
+add_action('wp_enqueue_scripts', 'snowberry_scripts');
+
+/*
+ * Print the <title> tag based on what is being viewed.
+ *
+ * filter function for wp_title
+ */
+function snowberry_filter_wp_title($title, $sep) {
+
+    global $page, $paged;
+
+    $insert = '';
+
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo('description', 'display');
+    if ($site_description && (is_home() || is_front_page())) {
+        $insert .= " $sep $site_description";
+    }
+
+    // Add a page number if necessary:
+    if ($paged >= 2 || $page >= 2){
+        $insert .= " $sep " . sprintf(__('Page %s', 'snowberry'), max($paged, $page));
+    }
+
+    return $title . get_bloginfo('name') . $insert;
+}
+add_filter('wp_title', 'snowberry_filter_wp_title', 10, 2);
