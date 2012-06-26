@@ -4,8 +4,8 @@
  *
  * Contains the closing of the id=main div and all content after
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 ?>
@@ -23,8 +23,8 @@
 
 			<div id="site-generator">
 				<?php do_action( 'snowberry_credits' ); ?>
-				Powered by <a href="http://wordpress.org" style="text-decoration: underline;">WordPress</a><br>
-                Designed by <a href="http://stfalcon.com/" target="_blank" style="text-decoration: underline;">stfalcon.com</a>
+                <?php _e( 'Powered by', 'snowberry' ); ?>  <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'snowberry' ) ); ?>" style="text-decoration: underline;">WordPress</a><br>
+                <?php _e( 'Designed by', 'snowberry' ); ?> <a href="http://stfalcon.com/" target="_blank" style="text-decoration: underline;">stfalcon.com</a>
 			</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

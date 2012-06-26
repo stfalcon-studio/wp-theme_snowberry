@@ -2,8 +2,8 @@
 /**
  * The default template for displaying content
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 ?>

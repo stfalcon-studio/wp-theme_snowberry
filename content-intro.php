@@ -2,8 +2,8 @@
 /**
  * The template for displaying page content in the showcase.php page template
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 ?>

@@ -8,8 +8,8 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  */
 
 get_header(); ?>

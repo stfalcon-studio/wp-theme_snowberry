@@ -4,8 +4,8 @@
  *
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 ?>

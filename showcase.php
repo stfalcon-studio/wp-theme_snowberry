@@ -9,13 +9,10 @@
  *
  * We are creating two queries to fetch the proper posts and a custom widget for the sidebar.
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
-
-// Enqueue showcase script for the slider
-wp_enqueue_script( 'snowberry-showcase', get_template_directory_uri() . '/js/showcase.js', array( 'jquery' ), '2011-04-28' );
 
 get_header(); ?>
 

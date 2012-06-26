@@ -2,8 +2,8 @@
 /**
  * The template used to display Tag Archive pages
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 
@@ -22,7 +22,7 @@ get_header(); ?>
 					<?php
 						$tag_description = tag_description();
 						if ( ! empty( $tag_description ) )
-							echo apply_filters( 'tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
+							echo apply_filters( 'snowberry_tag_archive_meta', '<div class="tag-archive-meta">' . $tag_description . '</div>' );
 					?>
 				</header>
 

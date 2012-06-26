@@ -2,8 +2,8 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package WordPress
- * @subpackage Snowberry
+ * @package Snowberry
+ * @subpackage Template
  * @since Snowberry 1.0
  */
 
