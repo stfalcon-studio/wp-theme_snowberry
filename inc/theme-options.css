@@ -33,3 +33,11 @@ body.rtl .image-radio-option label {
 	float: right;
 	margin: 0 2px 20px 30px;
 }
+
+#colorPickerDiv {
+    z-index: 100;
+    background:#eee;
+    border:1px solid #ccc;
+    position:absolute;
+    display:none;
+}
