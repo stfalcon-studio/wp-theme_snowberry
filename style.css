@@ -259,8 +259,7 @@ body {
 	width: auto;
 }
 .one-column #nav-below {
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 1.625em;
+    margin-bottom: 0;
 }
 .one-column #secondary {
 	float: none;
@@ -322,11 +321,6 @@ body {
 }
 .one-column.singular .pull.alignright {
 	margin: 0 0 0 1.625em;
-}
-.one-column.singular .entry-meta .edit-link a {
-	position: absolute;
-	left: 0;
-	top: 40px;
 }
 .one-column.singular #author-info {
 	margin: 2.2em -8.8% 0;
@@ -560,12 +554,17 @@ input#searchsubmit {
     cursor: pointer;
     position: absolute;
     top: 1px;
-    right: 1px;
+    right: 2px;
     height: 23px;
     width: 29px;
     text-indent: -99999px;
 }
-
+.left-sidebar .widget input#searchsubmit {
+    right: 4px
+}
+.right-sidebar .widget input#searchsubmit {
+    right: 1px
+}
 /* Links */
 a {
 	color: #008fd2;

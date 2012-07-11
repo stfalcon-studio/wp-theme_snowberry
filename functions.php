@@ -64,8 +64,8 @@ if ( ! function_exists( 'snowberry_setup' ) ):
  * @uses add_editor_style() To style the visual editor.
  * @uses add_theme_support() To add support for post thumbnails, automatic feed links, and Post Formats.
  * @uses register_nav_menus() To add support for navigation menus.
- * @uses add_custom_background() To add support for a custom background.
- * @uses add_custom_image_header() To add support for a custom header.
+ * @uses add_theme_support( 'custom-background', $args ) To add support for a custom background.
+ * @uses add_theme_support( 'custom-header', $args ) To add support for a custom header.
  * @uses register_default_headers() To register the default custom header images provided with the theme.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
@@ -102,7 +102,7 @@ function snowberry_setup() {
 	add_theme_support( 'post-formats', array( 'aside', 'link', 'gallery', 'status', 'quote', 'image' ) );
 
 	// Add support for custom backgrounds
-	add_custom_background();
+    add_theme_support( 'custom-background');
 
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
@@ -134,7 +134,11 @@ function snowberry_setup() {
 
 	// Add a way for the custom header to be styled in the admin panel that controls
 	// custom headers. See snowberry_admin_header_style(), below.
-	add_custom_image_header( 'snowberry_header_style', 'snowberry_admin_header_style', 'snowberry_admin_header_image' );
+    add_theme_support('custom-header', array(
+        'wp-head-callback'       => 'snowberry_header_style',
+        'admin-head-callback'    => 'snowberry_admin_header_style',
+        'admin-preview-callback' => 'snowberry_admin_header_image',
+    ));
 
 	// ... and thus ends the changeable header business.
 
@@ -193,7 +197,7 @@ if ( ! function_exists( 'snowberry_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * Referenced via add_custom_image_header() in snowberry_setup().
+ * Referenced via add_theme_support( 'custom-header', $args ) in snowberry_setup().
  *
  * @since Snowberry 1.0
  */
@@ -243,7 +247,7 @@ if ( ! function_exists( 'snowberry_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * Referenced via add_custom_image_header() in snowberry_setup().
+ * Referenced via add_theme_support( 'custom-header', $args ) in snowberry_setup().
  *
  * @since Snowberry 1.0
  */
