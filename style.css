@@ -4,7 +4,7 @@
  * Description: Simple and clean wordpress theme with nice contrast headers. Good readability  of text. Perfect theme for personal blogs. Based on HTML of Twenty Eleven.
  * Author:      web studio stfalcon.com
  * Author URI:  http://stfalcon.com/
- * Version:     1.1.4
+ * Version:     1.1.4.1
  * Tags:        light, white, silver, fixed-width, one-column, two-columns, right-sidebar
  *
  * License:     GNU General Public License
@@ -1015,7 +1015,6 @@ footer.entry-meta .sep{
 .comment-content h2 {
 	color: #000;
 	font-weight: bold;
-	margin: 0 0 .8125em;
 }
 .entry-content ul{
 	margin-left:1.3em;
@@ -1027,10 +1026,12 @@ footer.entry-meta .sep{
 	padding-left:1.2em;
 	/*margin-bottom: 0.5em;*/
 }
-.entry-content h1{
+.entry-content h1,
+.comment-content h1 {
 	font-size:27px;
 	}
-.entry-content h2{
+.entry-content h2,
+.comment-content h2 {
 	font-size:20px;
 	font-family:'Open Sans', arial, sans-serif;
 }
